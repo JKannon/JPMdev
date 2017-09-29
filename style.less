@@ -1,0 +1,431 @@
+/*
+Theme Name: Pinnacle Premium Child Theme
+Theme URI: http://themes.kadencethemes.com/pinnacle-premium/
+Description: Child Theme for Pinnacle Premium
+Author: Kadence Themes
+Author URI: http://kadencethemes.com/
+Template: pinnacle_premium
+Version: 1.0
+*/
+
+// Variables
+@site-orange: #ff6b02;
+@site-blue: #00a4b2;
+
+// Mixins
+.boxShadow () {
+    -webkit-box-shadow: 7px 7px 0px 0px #7F4C27;
+       -moz-box-shadow: 7px 7px 0px 0px #7F4C27;
+            box-shadow: 7px 7px 0px 0px #7F4C27;
+}
+
+// Styles Begin
+
+
+/* ----- Home ----- */ 
+
+.home {
+    .page-header{
+        text-align: center;
+        .row{
+            background-color: rgba(255, 255, 255, .8);
+        }
+    }
+    .titleclass .header-color-overlay{
+        opacity: 0.2;
+    }
+}
+.home-padding{
+    padding: 25px 0;
+    &:first-child{
+        padding-top: 50px;
+    }
+    &:last-child{
+        padding-bottom: 100px
+    }
+}
+#home-custom-carousel .custom_carousel_item{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    h5{
+        transition: color .6s ease-out;
+        -webkit-transition: color .6s ease-out;
+        -moz-transition: color .6s ease-out;
+        -o-transition: color .6s ease-out;
+    }
+    .custom_carousel_details {
+        background-color: #f9f9f9;
+    }
+    &:hover {
+        -webkit-border-bottom-left-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        -moz-border-bottom-left-radius: 5px;
+        -moz-border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        -moz-box-shadow: 0 -3px rgba(0,0,0,.1) inset;
+        -webkit-box-shadow: 0 -3px rgba(0,0,0,.1) inset;
+        -o-box-shadow: 0 -3px rgba(0,0,0,.1) inset;
+        box-shadow: 0 -3px rgba(0,0,0,.1) inset;
+        .custom_carousel_details{
+            background-color: #fff;
+            h5{
+                color: @site-orange;
+            }
+        }
+    }
+    a.custom_carousel_item_link {
+        display: block;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .ccarousel_excerpt {
+        color: #444;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+.infobanner .home-message {
+    background-color: rgba(0, 0, 0, 0.2);
+    h4, h5{
+        color: #ededed;
+        transition: color .6s ease-out; 
+        -webkit-transition: color .6s ease-out; 
+        -moz-transition: color .6s ease-out; 
+        -o-transition: color .6s ease-out; 
+    }
+    &:hover{
+        h4, h5{
+            color: #fff;
+        }
+    }    
+}
+
+
+/* ----- Menu ----- */ 
+
+#menu-main-menu{
+    li{
+        a{
+            transition: color .3s ease-out, background-color .3s ease-out;
+            -webkit-transition: color .3s ease-out, background-color .3s ease-out;
+            -moz-transition: color .3s ease-out, background-color .3s ease-out;
+            -o-transition: color .3s ease-out, background-color .3s ease-out;
+            &:hover{
+                color: #fff !important;
+                background-color: @site-orange;
+            }
+        }
+        &.current-menu-item.current_page_item{
+            a{
+                background-color: @site-orange;
+                color: #fff !important;
+            } 
+        }
+    }
+    
+}
+
+/* ----- Pages ----- */ 
+
+body.page #content .main .pageclass {
+    padding: 20px 20px 50px;
+}
+
+.contentclass{
+    background-color: #fff;
+}
+
+#kadbreadcrumbs{
+    color: #444;
+    a {
+        color: #444;
+    }
+    .kad-breadcurrent{
+        color: @site-orange;
+    }
+}
+
+/* ----- Forms ----- */
+
+label{
+    display: block;
+}
+input[type=text],
+input[type=tel],
+input[type=email],
+input[type=search],
+textarea,
+select,
+.your-service .select2-container--default .select2-selection--multiple {
+    text-indent: 2px;
+    margin-top: 10px;
+    width: 100% !important;
+    max-width: 400px;
+    font-weight: 300;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-bottom: 1px solid #ededed;
+    border-left: 3px solid @site-blue;
+    border-top: none;
+    border-right: none;
+    background-color: #fff;
+    &:focus, &:active {
+        border-left: 3px solid @site-blue;
+        background-color: #ededed;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        -o-box-shadow: none;
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+    }
+    &.wpcf7-not-valid{
+        border-left: 3px solid red;
+        background-color: pink;
+        color: red;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        -o-box-shadow: none;
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        &:focus, &:active {
+            border-left: 3px solid @site-blue;
+            background-color: #ededed;
+            box-shadow: none;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            -o-box-shadow: none;
+            border-radius: 0px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+        }
+    }
+}
+input[type=text],
+input[type=tel],
+input[type=email],
+input[type=search],
+textarea,
+select{
+    padding: 8px;
+}
+.your-service .select2-container--default.select2-container--focus .select2-selection--multiple{
+    border-color: rgba(140,140,140,.8);
+    border-left: 3px solid @site-blue;
+    background-color: #ededed;
+    border-top: none;
+    border-right: none;
+}
+.select2-container--default{
+    .select2-selection--multiple{
+        border: none;
+        border-radius: 0px;
+        .select2-selection__rendered li{
+            color: #444;
+            text-indent: 0px;
+        }
+    }
+} 
+
+.select2-container .select2-search--inline .select2-search__field{
+    margin-top: 0;
+}
+input.wpcf7-form-control.wpcf7-submit#contact-submit{
+    margin-top: 20px;
+    background-color: @site-blue;
+    transition: background .6s ease-out;
+    -webkit-transition: background .6s ease-out;
+    -moz-transition: background .6s ease-out;
+    -o-transition: background .6s ease-out;
+    &:hover{
+        background-color: @site-orange;
+    }
+}
+
+/* ----- Footer ----- */ 
+
+.footercol2 {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+    .widget-first{
+        // @media screen and (max-width: 767px) {
+        //     margin-top: 0;
+        // }
+        .widget{
+            // @media screen and (max-width: 767px) {
+            //     margin-top: 0;
+            // }
+            ul#menu-footer-nav2 {
+                @media screen and (min-width: 768px) {        
+                    margin-top: 90px;
+                }
+            }
+        }
+        
+    }
+    
+}
+.footercol4 {
+    .widget-2 {
+        display: inline-block;
+        float: left;
+    }
+    .widget-3 {
+        display: inline-block;
+        float: right;
+        margin-top: 20px;
+        img{
+            max-width: 70px !important;
+            margin: 15px 0 15px 15px;
+        }
+        @media screen and (min-width: 992px) and (max-width: 1199px) {
+            float: none;
+        }
+
+    }
+    .widget{
+        margin-top: 0;
+    }
+}
+.widget_kadence_contact {
+    .vcard{
+        i{
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .vcard-company{
+            color: @site-orange;
+        }
+        .vcard-address{
+            span{
+                text-indent: 34px;
+            }
+        }
+    }
+}
+.footercredits {
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 0;
+    background-color: #323232;
+    text-align: center;
+    p{
+        font-size: 11px;
+    }
+    a {
+        color: @site-blue;
+    }
+}
+
+/* ----- The typing effect ----- */
+
+.kad-call-sitewide-title-case{
+    padding-right: 0;
+    @media screen and (max-width:991px) {
+        padding-right: 15px;
+    }
+}
+.kad-call-title{
+    // overflow: hidden; /* ----- Ensures the content is not revealed until the animation ----- */
+    // border-right: .15em solid @site-blue; /* ----- The typwriter cursor ----- */
+    // white-space: nowrap; /* -----  Keeps the content on a single line ----- */
+    // margin: 10px auto; /* ----- Gives that scrolling effect as the typing happens ----- */
+    // letter-spacing: .15em; /* ----- Adjust as needed ----- */
+    // animation: 
+    //     typing 3.5s steps(40, end),
+    //     blink-caret .75s step-end infinite;
+    @media screen and (max-width:991px) {
+        font-size: 28px;
+    }
+    @media screen and (max-width:767px) {   
+        font-size: 20px;
+    }
+    @media screen and (max-width:480px) {
+        font-size: 16px;
+    }
+
+}
+.typed-cursor{
+    font-family: Raleway;
+    line-height: 40px;
+    font-weight: 400;
+    font-style: normal;
+    color: @site-blue;
+    font-size: 32px;
+}
+
+/* ----- Extras ----- */
+
+.box_ul{
+    min-height: 1px;
+    color: #fff;
+    display: inline-block;
+    padding: 15px 30px 20px 15px;
+    .boxShadow ();
+    li{
+        list-style-type: square;
+        list-style-position: outside;
+        padding-left: 5px;
+        margin-left: 25px;
+        margin-bottom: 10px;
+    }
+    h5{
+        color: #fff;
+        font-weight: bold;
+    }
+}
+.orange_box{
+    background-color: #FF7A1B;
+}
+.orange_box2{
+    background-color: @site-orange;
+}
+.orange_box3{
+    background-color: #E56002;
+}
+blockquote{
+    font-size: 1.1em;
+    li {
+        margin-bottom: 10px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+// @keyframes typing {
+//   from { width: 0 }
+//   to { width: 100% }
+// }
+
+// /* ----- The typewriter cursor effect ----- */
+// @keyframes blink-caret {
+//   from, to { border-color: transparent }
+//   50% { border-color: @site-blue; }
+// }
+
+// @media screen and (max-width:991px) {
+// 	.hidden-tablet-sm{
+// 		display: none;	
+// 	}
+// }
